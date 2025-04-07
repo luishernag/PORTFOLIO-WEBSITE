@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Página de portafolio">
+    <meta name="keywords" content="Portafolio, retratos, video, fotografía">
+    <title>Luis Hernández</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/hydra-synth"></script>
+</head>
+<body>
+    <div id="video-container">
+        <video id="video-background" autoplay loop muted aria-hidden="true">
+            <source src="https://res.cloudinary.com/dn8nqjilv/video/upload/v1742489520/blue_beam_ko4yhf.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <canvas id="hydra"></canvas>
+        <h1>Luis Hernández</h1>
+        <nav aria-label="Project Navigation">
+            <ol>
+                <li><span class="info" data-sidebar="sideBar1" role="button" aria-label="View Mexican Shabat project">Mexican Shabat</span></li>
+                <li><span class="info" data-sidebar="sideBar2" role="button" aria-label="View Post-Mexican Shabat project">Post-Mexican Shabat</span></li>
+                <li><span class="info" data-sidebar="sideBar3" role="button" aria-label="View Flashes of Suicidal Excitement project">Flashes of Suicidal Excitement</span></li>
+                <li><span class="info" data-sidebar="sideBar4" role="button" aria-label="View Campaña contra el dengue project">Campaña contra el dengue</span></li>
+            </ol>
+        </nav>
+
+        <section id="inst-side">
+            <div>
+                <a class="instagram" href="https://www.instagram.com/luishernang/" target="_blank">Instagram</a>
+            </div>
+            <p class="info" data-sidebar="infoSidebar">
+                <span class="info-trigger">Information</span>
+            </p>
+        </section>
+    </header>
+
+    <main>
+        <div id="sideBar1" class="sidebar">
+            <span class="close-btn" onclick="closeSidebar()" role="button" aria-label="Close sidebar">✖</span>
+            <h1 class="título">Mexican shabat (2023 - 2024)</h1>
+            <button class="context-button" onclick="mostrarOcultar('context1')">▶ Context</button>
+            <div id="context1" class="context">                
+                <p class="info-text-projects">This project is an attempt to relate the practice of Shabbat with modern work rest.</p>
+                <p class="info-text-projects">I was struck by the fact that work rest, seen as a ritual, contains almost all the characteristics of Shabbat or shares many similarities; what's different here is the purpose.</p>
+                <p class="info-text-projects">In the creative process, I sought to portray a modern version of Shabbat -how it is lived- and took photographs almost exclusively on my rest days.</p>
+            </div>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738884059/H1220006_gmqt8c.jpg" alt="digital kiss">           
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738880182/DSC01651_fkqa5f.jpg" alt="testicle mountain">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738880048/H1270030_ckflyq.jpg" alt="semen bridge">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738880050/H1300006_piitz8.jpg" alt="sharing bath">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738880053/H1420007_hcfmmq.jpg" alt="balloons congress">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738880053/H1420017_hj3jr2.jpg" alt="AMLO's propaganda car">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738880052/H1410127_da7owt.jpg" alt="copper monks and priests">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738880049/H1290033_ukbyco.jpg" alt="plastic wearing">
+
+                    </div>   
+                </div>
+                <button class="nav-arrow left-arrow" onclick="prevSlide()">&#9664;</button>
+                <button class="nav-arrow right-arrow" onclick="nextSlide()">&#9654;</button>    
+            </div>   
+        </div>
+
+        <div id="sideBar2" class="sidebar">
+            <span class="close-btn" onclick="closeSidebar()" role="button" aria-label="Close sidebar">✖</span>
+            <h1 class="título">Post-mexican shabat (2024)</h1>
+            <button class="context-button" onclick="mostrarOcultar('context2')">▶ Context</button>
+            <div id="context2" class="context">
+                <p class="info-text-projects">Unemployed, I decided to move the initial project from the realm of rest days to the absence of workdays, portraying leisure.</p>
+                <p class="info-text-projects">For three months I took photographs whenever I felt like it, just seeking to create images from my free time.</p>
+            </div>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1742507763/Film_16_q7y1zs.jpg" alt="mexican shabat"> 
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738882463/_MG_0395_kyqfxg.jpg" alt="waiting for the chicken">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1742507757/Film_14_krh7uh.jpg" alt="hanging stare">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1742507762/Film_10-2_qq6db9.jpg" alt="waiting for a moment">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1742507496/ScanImage430032_izhkdq.jpg" alt="cast">
+                    </div>
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738881678/IMG_1568_mlnasa.jpg" alt="memoires box">
+                    </div> 
+                    <div class="slide">
+                        <img src="https://res.cloudinary.com/dn8nqjilv/image/upload/v1738881677/IMG_8188-3_d90h2u.jpg" alt="amorsito">
+                    </div>
+                </div>
+                <button class="nav-arrow left-arrow">◀</button>
+                <button class="nav-arrow right-arrow">▶</button>
+            </div>
+        </div>
+
+        <div id="sideBar3" class="sidebar">
+            <span class="close-btn" onclick="closeSidebar()" role="button" aria-label="Close sidebar">✖</span>
+            <h1 class="título">Flashes of Suicidal Excitement (2024)</h1>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <iframe title="vimeo-player" src="https://player.vimeo.com/video/1071944658?h=d586018ee0" style="width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sideBar4" class="sidebar">
+            <span class="close-btn" onclick="closeSidebar()" role="button" aria-label="Close sidebar">✖</span>
+            <h1 class="título">Campaña contra el dengue (2024)</h1>
+            <div class="slider-container">          
+                <div class="slider">
+                    <div class="slide">
+                        <iframe title="vimeo-player" src="https://player.vimeo.com/video/1071944658?h=d586018ee0" style="width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="infoSidebar" class="sidebar">
+            <span class="close-btn" onclick="closeSidebar()" role="button" aria-label="Close sidebar">✖</span>
+            <p class="info-text-space">Hey, my name is Luis.</p>
+            <p class="info-text">I'm a photographer living in Torreón, México. 
+                Feel free to reach out for questions, commissions and love letters.</p>
+            <p class="info-text-space">alberto.gonzalezh11@gmail.com</p>
+        </div>
+    </main>
+
+    <script src="sidebar.js"></script>
+</body>
+</html>
