@@ -10,32 +10,32 @@
   font-display: swap;
 }
 
-
 * {
-  box-sizing: border-box; /* Aplicamos el box-sizing globalmente */
+  box-sizing: border-box; /* Apply box-sizing globally */
 }
-/* Estilo para el contenedor del video */
+
+/* Video container style */
 #video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Coloca el video debajo de todo */
+  z-index: -1; /* Place video behind all content */
 }
 
-/* Estilo para el video */
+/* Video style */
 #video-background {
   position: absolute;
   top: 50%; 
   left: 50%;
   width: 100%; 
   height: 100%;
-  object-fit: cover; /* 🔥 Ajusta el video sin distorsionarlo */
-  transform: translate(-50%, -50%); /* 🔥 Centra el video */
+  object-fit: cover; /* Adjust video without distortion */
+  transform: translate(-50%, -50%); /* Center the video */
 }
 
-/* Estilo para el header */
+/* Header style */
 header {
   position: relative;
   z-index: 1;
@@ -43,16 +43,16 @@ header {
   padding: 20px;
 }
 
-/* Estilo para el canvas (Hydra Synth) */
+/* Canvas style (Hydra Synth) */
 canvas#hydra {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0; /* Coloca el canvas sobre el video */
+  z-index: 0; /* Place canvas above video */
   width: 100%;
   height: 100%;
   object-fit: contain;
-  pointer-events: none; /* Evita que el canvas bloquee interacción con otros elementos */
+  pointer-events: none; /* Prevent canvas from blocking interaction with other elements */
 }
 
 body {
@@ -61,7 +61,7 @@ body {
 }
 
 h1, h2, p, ol {
-  margin: 0; /* Restablecemos márgenes por defecto */
+  margin: 0; /* Reset default margins */
 }
 
 h1 {
@@ -149,11 +149,11 @@ nav div, .instagram, .info-trigger {
   font-weight: 600;
 }
 
-/* Modifica el contenedor de la barra lateral */
+/* Modify sidebar container */
 .sidebar {
   position: fixed;
   top: 0;
-  right: -500px; /* Ajusta el valor según el tamaño de la barra */
+  right: -500px; /* Adjust value according to sidebar size */
   width: 500px;
   height: 100%;
   background: white;
@@ -181,7 +181,7 @@ nav div, .instagram, .info-trigger {
 #sideBar2 .slide img {
   width: 100%; 
   height: auto;
-  object-fit: contain; /* Usa 'cover' si necesitas que llene el espacio */
+  object-fit: contain; /* Use 'cover' if you need to fill the space */
   min-width: 400px;
   min-height: 400px;
 }
@@ -230,15 +230,15 @@ p.info-text-email {
   margin: 0px auto;
 }
 
-/* ✅ Contenedor interno */
+/* Inner container */
 .slider {
   display: flex;
-  transition: transform 0.5s ease; /* Mantiene la animación suave */
+  transition: transform 0.5s ease; /* Keep animation smooth */
   width: 100%;
   height: 300px;
 }
 
-/* ✅ Cada slide ocupa el 100% del contenedor */
+/* Each slide takes 100% of container */
 .slide {
   width: 100%; 
   height: 350px;
@@ -250,6 +250,10 @@ p.info-text-email {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .img {
@@ -283,6 +287,72 @@ p.info-text-email {
 
 .right-arrow {
   right: 10px;
+}
+
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 20000;
+}
+
+.lightbox.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 20001;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.zoom-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 20001;
+}
+
+.zoom-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid white;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.zoom-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Media Queries for Mobile Devices */
