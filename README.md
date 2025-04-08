@@ -14,7 +14,6 @@ A photography portfolio website showcasing various projects including Mexican Sh
 - HTML5
 - CSS3
 - JavaScript
-- Hydra Synth
 
 ## Setup
 
